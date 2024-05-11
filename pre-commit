@@ -1,0 +1,11 @@
+#!/bin/sh
+# Pre-commit hook para ejecutar Stylelint utilizando npm
+
+# Ejecutar Stylelint a través de npm
+if ! npm run lint:css; then
+  echo "Stylelint encontró errores. Commit cancelado."
+  exit 1
+fi
+
+exit 0
+

@@ -1,0 +1,33 @@
+extends:
+  - "stylelint-config-standard"
+  - "stylelint-config-recommended-scss"
+plugins:
+  - "stylelint-scss"
+  - stylelint-prettier
+rules:
+  # archivos vacíos
+  no-empty-source: null
+
+  # convención BEM
+  selector-class-pattern: "^[a-z0-9\\-]+(__[a-z0-9\\-]+)?(--[a-z0-9\\-]+){0,2}$"
+  scss/selector-no-redundant-nesting-selector: true
+
+  # especificidad en selectores
+  selector-max-id: 0
+  selector-max-specificity: "0,3,0"
+
+  # anidamiento
+  max-nesting-depth: 3
+
+  # espacios en propiedades
+  prettier/prettier: true
+
+  # limitar !important
+  declaration-no-important: true
+
+  # variables
+  scss/dollar-variable-pattern: "^var-"
+  scss/no-duplicate-dollar-variables: true
+
+  # operadores
+  scss/operator-no-unspaced: true
