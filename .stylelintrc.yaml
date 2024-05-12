@@ -31,3 +31,8 @@ rules:
 
   # operadores
   scss/operator-no-unspaced: true
+
+  # import
+  at-rule-no-unknown: null
+  scss/at-rule-no-unknown: true
+  import-notation: null
