@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../base/variables" as v;
+
+.seccion-destacada {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 600px;
+  background-image: url("../images/hero-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
+
+  @supports (color: color(display-p3 1 1 1)) {
+    color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
+  }
+}

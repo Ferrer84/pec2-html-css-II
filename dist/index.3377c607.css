@@ -13558,4 +13558,30 @@ a {
   transform: scale(.7);
 }
 
+.header--bg {
+  background-image: url("hero-img.1b1d2059.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.seccion-destacada {
+  color: #fff;
+  background-image: url("hero-img.1b1d2059.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  min-height: 600px;
+  display: flex;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  .seccion-destacada {
+    color: #fff;
+    color: color(display-p3 1 1 1);
+  }
+}
+
 /*# sourceMappingURL=index.3377c607.css.map */

@@ -37,6 +37,11 @@ $var-colors: (
     "display-p3": color(display-p3 0.5 0.5 0.5),
     "srgb": #808080,
   ),
+
+  "main-white": (
+    "display-p3": color(display-p3 1 1 1),
+    "srgb": #fff,
+  ),
 );
 
 $var-breakpoint-code-values: (sm, md, lg, xl, xxl);
