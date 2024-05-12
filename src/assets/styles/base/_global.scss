@@ -1,16 +1,35 @@
-@use "normalize.css";
+/* ========== typography ========== */
+@use "variables" as v;
+@use "typography" as t;
 
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-img {
-  display: block;
-  width: 100%;
+html {
+  font-size: var(--font-size-document);
 }
 
 body {
-  height: 100lvh;
+  min-height: 100lvh;
+  font-family: t.$var-font-primary;
+  line-height: 1.8;
+}
+
+/* ========== img ========== */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ========== list ========== */
+ul {
+  list-style: none;
+}
+
+/* ========== link ========== */
+a {
+  color: #000;
 }
