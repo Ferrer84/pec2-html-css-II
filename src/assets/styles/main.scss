@@ -1,2 +1,7 @@
-@use "normalize.css";
-@use "./base/index";
+@use "normalize.css" as normalize;
+@use "bootstrap/dist/css/bootstrap.min.css" as bootstrap;
+@use "./base/index" as base;
+@use "./layout/index" as layout;
+@use "./module/index" as module;
+@use "./state/index" as state;
+@use "./theme/index" as theme;
