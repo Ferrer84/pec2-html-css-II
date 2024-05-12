@@ -1,0 +1,21 @@
+.footer {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+  }
+
+  &__cabecera {
+    font-size: 1rem;
+  }
+
+  &__info {
+    font-size: 0.8rem;
+  }
+}

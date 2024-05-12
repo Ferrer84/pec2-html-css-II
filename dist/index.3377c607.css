@@ -13558,10 +13558,31 @@ a {
   transform: scale(.7);
 }
 
-.header--bg {
-  background-image: url("hero-img.1b1d2059.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.header {
+  width: 100%;
+  position: fixed;
+}
+
+.footer__container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  display: grid;
+}
+
+@media (max-width: 700px) {
+  .footer__container {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer__cabecera {
+  font-size: 1rem;
+}
+
+.footer__info {
+  font-size: .8rem;
 }
 
 .seccion-destacada {
