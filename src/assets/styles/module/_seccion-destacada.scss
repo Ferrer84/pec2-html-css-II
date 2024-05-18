@@ -3,17 +3,22 @@
 
 .highlighted-section {
   flex: 1;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 600px;
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
   background-image: url("../images/hero-img.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
   text-align: center;
+
+  &__content {
+    grid-row: 2 / 3;
+    display: grid;
+    gap: 1rem;
+  }
 
   @supports (color: color(display-p3 1 1 1)) {
     color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
