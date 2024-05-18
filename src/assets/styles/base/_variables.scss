@@ -18,14 +18,9 @@ $var-font-weight: (
 
 // variables colores
 $var-colors: (
-  "main-blue": (
-    "display-p3": color(display-p3 0.15 0.55 0.85),
-    "srgb": #2494d8,
-  ),
-
-  "main-green": (
-    "display-p3": color(display-p3 0 0.55 0.4),
-    "srgb": #008e6a,
+  "main-orange": (
+    "display-p3": color(display-p3 1 0.5 0),
+    "srgb": #ffa500,
   ),
 
   "main-black": (

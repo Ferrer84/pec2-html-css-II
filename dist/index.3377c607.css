@@ -13505,6 +13505,7 @@ html {
 
 body {
   flex-direction: column;
+  min-width: 300px;
   min-height: 100lvh;
   font-family: Roboto, sans-serif;
   line-height: 1.8;
@@ -13554,6 +13555,7 @@ a {
 }
 
 .header {
+  z-index: 10;
   width: 100%;
   position: fixed;
 }
@@ -13589,6 +13591,104 @@ a {
   margin-inline: auto;
   padding: 100px 20px 20px;
   display: flex;
+}
+
+.article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 50px 50px;
+}
+
+.article__header {
+  text-align: center;
+  color: color(display-p3 1 1 1);
+  text-shadow: 1px 1px 2px color(display-p3 0 0 0);
+  background-image: url("article_1.61ec57c2.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.article__title {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.article__subtitle {
+  color: color(display-p3 1 .5 0);
+  font-size: 1.2em;
+}
+
+.article__image {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.article__paragraph, .article__list {
+  margin-bottom: 20px;
+}
+
+.article__footer {
+  text-align: center;
+  color: color(display-p3 .5 .5 .5);
+  margin-top: 40px;
+  font-size: .9em;
+}
+
+.list-group {
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  border: none;
+  padding-left: 100px;
+  position: relative;
+}
+
+.list-group-item:before {
+  content: counter(list-item) ".";
+  counter-increment: list-item;
+  color: color(display-p3 1 1 1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+:is(.article__list, .list-group) .list-group-item {
+  border: none;
+  margin-bottom: 20px;
+  padding-left: 60px;
+  position: relative;
+}
+
+:is(.article__list, .list-group) .list-group-item:before {
+  content: counter(list-item) ".";
+  counter-increment: list-item;
+  color: color(display-p3 1 1 1);
+  background-color: color(display-p3 1 .5 0);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 
 .highlighted-section {
