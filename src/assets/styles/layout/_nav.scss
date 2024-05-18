@@ -7,10 +7,10 @@
 
   :is(.container-fluid, .navbar-nav) {
     height: 100%;
-    background-color: map.get(map.get(v.$var-colors, "main-blue"), "srgb");
+    background-color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
 
     @supports (color: color(display-p3 1 1 1)) {
-      background-color: map.get(map.get(v.$var-colors, "main-blue"), "display-p3");
+      background-color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
     }
   }
 

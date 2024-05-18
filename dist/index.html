@@ -1,32 +1,32 @@
 <!doctype html>
-
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.3377c607.css">
-    <link rel="stylesheet" href="index.47769f60.css">
     <script src="index.eeea8925.js" defer=""></script>
-    <title></title>
+    <title>Page with Bottom Menu</title>
   </head>
   <body>
-    <header class="header header--bg">
+    <header class="header header--background">
       <nav class="navbar-container navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">MyBrand</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-container__brand" href="#">
+            <img src="logo.e8834704.png" alt="Logo" style="height: 40px">
+          </a>
+          <button class="navbar-container__toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="navbar-container__collapse collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Page two</a>
+          <div class="navbar-container__collapse collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-container__list navbar-nav">
+              <li class="navbar-container__item nav-item">
+                <a class="navbar-container__link nav-link active" aria-current="page" href="#">Page two</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Page three</a>
+              <li class="navbar-container__item nav-item">
+                <a class="navbar-container__link nav-link" href="#">Page three</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Page four</a>
+              <li class="navbar-container__item nav-item">
+                <a class="navbar-container__link nav-link" href="#">Page four</a>
               </li>
             </ul>
           </div>
@@ -34,38 +34,62 @@
       </nav>
     </header>
 
-    <div class="seccion-destacada">
-      <h1 class="seccion-destacada__titulo">Batalla de sabores</h1>
-      <p class="seccion-destacada__subtitulo">Enciende tus fogones y cocina hacia la victoria</p>
+    <div class="highlighted-section">
+      <h1 class="highlighted-section__title">Battle of Flavors</h1>
+      <p class="highlighted-section__subtitle">Fire up your stoves and cook your way to victory</p>
     </div>
 
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__columna">
-          <h3 class="footer__cabecera">Contacto</h3>
-          <ul>
-            <li class="footer__info">Teléfono: 123-456-7890</li>
-            <li class="footer__info">Email: info@concursochef.com</li>
-            <li class="footer__info">Dirección: Calle Sabor 24, Gourmet</li>
+        <div class="footer__column">
+          <h3 class="footer__header">Contact</h3>
+          <ul class="footer__list">
+            <li class="footer__info">Phone: 123-456-7890</li>
+            <li class="footer__info">Email: info@chefcompetition.com</li>
+            <li class="footer__info">Address: Flavor Street 24, Gourmet City</li>
           </ul>
         </div>
-        <div class="footer__columna">
-          <h3 class="footer__cabecera">Enlaces Rápidos</h3>
-          <ul>
-            <li class="footer__info"><a href="#inicio">Inicio</a></li>
-            <li class="footer__info"><a href="#reglas">Reglas del Concurso</a></li>
-            <li class="footer__info"><a href="#premios">Premios</a></li>
+        <div class="footer__column">
+          <h3 class="footer__header">Quick Links</h3>
+          <ul class="footer__list">
+            <li class="footer__info"><a class="footer__link" href="#home">Home</a></li>
+            <li class="footer__info"><a class="footer__link" href="#rules">Contest Rules</a></li>
+            <li class="footer__info"><a class="footer__link" href="#prizes">Prizes</a></li>
           </ul>
         </div>
-        <div class="footer-columna">
-          <h3 class="footer__cabecera">Redes Sociales</h3>
-          <ul>
-            <li class="footer__info"><a href="https://facebook.com">Facebook</a></li>
-            <li class="footer__info"><a href="https://twitter.com">Twitter</a></li>
-            <li class="footer__info"><a href="https://instagram.com">Instagram</a></li>
+        <div class="footer__column">
+          <h3 class="footer__header">Social Media</h3>
+          <ul class="footer__list">
+            <li class="footer__info"><a class="footer__link" href="https://facebook.com">Facebook</a></li>
+            <li class="footer__info"><a class="footer__link" href="https://twitter.com">Twitter</a></li>
+            <li class="footer__info"><a class="footer__link" href="https://instagram.com">Instagram</a></li>
           </ul>
         </div>
       </div>
     </footer>
+
+    <nav class="bottom-menu bg-light py-3">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <a href="#" class="bottom-menu__brand">
+              <img src="logo.e8834704.png" alt="Logo" style="height: 40px">
+            </a>
+          </div>
+          <div class="col-md-4 text-center">
+            <nav class="bottom-menu__nav nav justify-content-center">
+              <a class="bottom-menu__link nav-link" href="#">Menu 1</a>
+              <a class="bottom-menu__link nav-link" href="#">Menu 2</a>
+              <a class="bottom-menu__link nav-link" href="#">Menu 3</a>
+            </nav>
+          </div>
+          <div class="col-md-4 text-end">
+            <a href="#" class="bottom-menu__icon text-dark me-2"><i class="bi bi-google"></i></a>
+            <a href="#" class="bottom-menu__icon text-dark me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="bottom-menu__icon text-dark me-2"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
