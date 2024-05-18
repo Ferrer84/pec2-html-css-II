@@ -13587,6 +13587,7 @@ a {
 
 .seccion-destacada {
   color: #fff;
+  text-align: center;
   background-image: url("hero-img.1b1d2059.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -13602,6 +13603,8 @@ a {
   .seccion-destacada {
     color: #fff;
     color: color(display-p3 1 1 1);
+    text-shadow: 1px 1px 2px #000;
+    text-shadow: 1px 1px 2px color(display-p3 0 0 0);
   }
 }
 

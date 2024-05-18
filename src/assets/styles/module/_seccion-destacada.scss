@@ -12,8 +12,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
+  text-align: center;
 
   @supports (color: color(display-p3 1 1 1)) {
     color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
+    text-shadow: 1px 1px 2px map.get(map.get(v.$var-colors, "main-black"), "display-p3");
   }
 }
