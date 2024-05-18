@@ -26,3 +26,16 @@
     transform: scale(0.7);
   }
 }
+
+.navbar-nav .nav-item .nav-link {
+  color: map.get(map.get(v.$var-colors, "main-black"), "srgb");
+  transition: color 0.2s;
+
+  &.active {
+    color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
+  }
+
+  &:hover {
+    color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
+  }
+}

@@ -1,9 +1,4 @@
 /*!
- * Bootstrap Icons v1.11.3 (https://icons.getbootstrap.com/)
- * Copyright 2019-2024 The Bootstrap Authors
- * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
- */
-/*!
 * MDB5
 * Version: FREE 7.2.0
 *
@@ -21,6 +16,11 @@
 * Contact: contact@mdbootstrap.com
 *
 */
+/*!
+ * Bootstrap Icons v1.11.3 (https://icons.getbootstrap.com/)
+ * Copyright 2019-2024 The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
+ */
 :root, [data-bs-theme="light"] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

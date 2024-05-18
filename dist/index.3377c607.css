@@ -13554,6 +13554,15 @@ a {
   transform: scale(.7);
 }
 
+.navbar-nav .nav-item .nav-link {
+  color: #000;
+  transition: color .2s;
+}
+
+.navbar-nav .nav-item .nav-link.active, .navbar-nav .nav-item .nav-link:hover {
+  color: orange;
+}
+
 .header {
   z-index: 10;
   width: 100%;
@@ -13689,6 +13698,10 @@ a {
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
+}
+
+.container.py-5 {
+  margin-top: 50px;
 }
 
 .gallery-item {
