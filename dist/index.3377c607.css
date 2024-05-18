@@ -13588,6 +13588,7 @@ a {
 }
 
 .highlighted-section {
+  text-align: center;
   color: #fff;
   text-align: center;
   background-image: url("hero-img.1b1d2059.jpg");
@@ -13595,16 +13596,24 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   flex: 1;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: 1fr;
-  place-items: center;
-  display: grid;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-.highlighted-section__content {
-  grid-row: 2 / 3;
-  gap: 1rem;
-  display: grid;
+@supports (display: grid) {
+  .highlighted-section {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    place-items: center;
+    display: grid;
+  }
+
+  .highlighted-section__content {
+    grid-row: 2 / 3;
+    gap: 1rem;
+    display: grid;
+  }
 }
 
 @supports (color: color(display-p3 1 1 1)) {
