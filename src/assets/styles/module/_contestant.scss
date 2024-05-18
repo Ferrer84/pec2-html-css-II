@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "../base/variables" as v;
+
+.contestant {
+  flex: 1 1 calc(33.333% - 40px);
+  max-width: 200px;
+  box-shadow: 0 0 3px map.get(map.get(v.$var-colors, "main-grey"), "srgb");
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media (width <= 1024px) {
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: 200px;
+  }
+
+  @media (width <= 768px) {
+    flex: 1 1 calc(50% - 40px);
+    max-width: 200px;
+  }
+
+  @media (width <= 480px) {
+    flex: 1 1 100%;
+    max-width: 200px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 10px;
+  }
+
+  &__name {
+    font-size: 1.3em;
+    margin: 10px 0;
+    color: map.get(map.get(v.$var-colors, "main-black"), "srgb");
+  }
+
+  &__description {
+    font-size: 0.9em;
+    color: map.get(map.get(v.$var-colors, "main-black"), "srgb");
+  }
+
+  &__description :where(span) {
+    display: block;
+    margin: 5px 0;
+  }
+}

@@ -142,15 +142,16 @@
       this[globalName] = mainExports;
     }
   }
-})({"4MuH4":[function(require,module,exports) {
+})({"4RUHz":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "5c3cf7e1285358ec";
+var HMR_USE_SSE = false;
 module.bundle.HMR_BUNDLE_ID = "108f54d9eeea8925";
 "use strict";
-/* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
+/* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
   HMRMessage,
@@ -189,6 +190,7 @@ declare var HMR_HOST: string;
 declare var HMR_PORT: string;
 declare var HMR_ENV_HASH: string;
 declare var HMR_SECURE: boolean;
+declare var HMR_USE_SSE: boolean;
 declare var chrome: ExtensionContext;
 declare var browser: ExtensionContext;
 declare var __parcel__import__: (string) => Promise<void>;
@@ -232,7 +234,8 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== "undefined") {
         "0.0.0.0"
     ].includes(hostname) ? "wss" : "ws";
     var ws;
-    try {
+    if (HMR_USE_SSE) ws = new EventSource("/__parcel_hmr");
+    else try {
         ws = new WebSocket(protocol + "://" + hostname + (port ? ":" + port : "") + "/");
     } catch (err) {
         if (err.message) console.error(err.message);
@@ -302,12 +305,14 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== "undefined") {
             }
         }
     };
-    ws.onerror = function(e) {
-        if (e.message) console.error(e.message);
-    };
-    ws.onclose = function() {
-        console.warn("[parcel] \uD83D\uDEA8 Connection to the HMR server was lost");
-    };
+    if (ws instanceof WebSocket) {
+        ws.onerror = function(e) {
+            if (e.message) console.error(e.message);
+        };
+        ws.onclose = function() {
+            console.warn("[parcel] \uD83D\uDEA8 Connection to the HMR server was lost");
+        };
+    }
 }
 function removeErrorOverlay() {
     var overlay = document.getElementById(OVERLAY_ID);
@@ -6257,6 +6262,6 @@ var createPopper = /*#__PURE__*/ (0, _createPopperJs.popperGenerator)({
     defaultModifiers: defaultModifiers
 }); // eslint-disable-next-line import/no-unused-modules
 
-},{"./createPopper.js":"8qvXu","./modifiers/eventListeners.js":"gWilp","./modifiers/popperOffsets.js":"494Es","./modifiers/computeStyles.js":"jSB8s","./modifiers/applyStyles.js":"1injV","@parcel/transformer-js/src/esmodule-helpers.js":"dBYYk"}],"emlSW":[function() {},{}],"9wpAp":[function() {},{}]},["4MuH4","gSBHf"], "gSBHf", "parcelRequireb0cb")
+},{"./createPopper.js":"8qvXu","./modifiers/eventListeners.js":"gWilp","./modifiers/popperOffsets.js":"494Es","./modifiers/computeStyles.js":"jSB8s","./modifiers/applyStyles.js":"1injV","@parcel/transformer-js/src/esmodule-helpers.js":"dBYYk"}],"emlSW":[function() {},{}],"9wpAp":[function() {},{}]},["4RUHz","gSBHf"], "gSBHf", "parcelRequireb0cb")
 
 //# sourceMappingURL=index.eeea8925.js.map

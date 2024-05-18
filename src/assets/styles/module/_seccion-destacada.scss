@@ -12,7 +12,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
-  text-align: center;
 
   @supports (display: grid) {
     display: grid;
