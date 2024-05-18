@@ -13691,6 +13691,23 @@ a {
   transform: translateY(-50%);
 }
 
+.gallery-item {
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item :is(img) {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
 .highlighted-section {
   text-align: center;
   color: #fff;
