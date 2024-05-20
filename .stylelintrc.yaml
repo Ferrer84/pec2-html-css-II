@@ -27,7 +27,7 @@ rules:
 
   # variables
   scss/dollar-variable-pattern: "^var-"
-  scss/no-duplicate-dollar-variables: true
+  scss/no-duplicate-dollar-variables: null
 
   # operadores
   scss/operator-no-unspaced: true

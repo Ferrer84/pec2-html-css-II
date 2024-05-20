@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "sass:color";
+@use "./functions" as functions;
+
 // media query approach variable
 $var-media-query-approach: "desktop-first";
 
@@ -6,7 +10,7 @@ $var-media-query-approach: "desktop-first";
   --font-size-document: 16px;
 }
 
-// weights: 400, 700
+// weights
 $var-font-weight: (
   thin: 100,
   light: 300,
@@ -16,30 +20,14 @@ $var-font-weight: (
   black: 900,
 );
 
-// variables colores
-$var-colors: (
-  "main-orange": (
-    "display-p3": color(display-p3 1 0.5 0),
-    "srgb": #ffa500,
-  ),
-
-  "main-black": (
-    "display-p3": color(display-p3 0 0 0),
-    "srgb": #000,
-  ),
-
-  "main-grey": (
-    "display-p3": color(display-p3 0.5 0.5 0.5),
-    "srgb": #808080,
-  ),
-
-  "main-white": (
-    "display-p3": color(display-p3 1 1 1),
-    "srgb": #fff,
-  ),
+$var-base-colors: (
+  "main-orange": #ffa500,
+  "main-black": #000,
+  "main-grey": #808080,
+  "main-white": #fff,
 );
 
-$var-breakpoint-code-values: (sm, md, lg, xl, xxl);
+$var-colors: functions.var-generate-color-map($var-base-colors);
 
 $var-breakpoint-values: (
   "sm": 36rem,
@@ -57,6 +45,5 @@ $var-breakpoint-values: (
 $var-data-maps: (
   font-weight: $var-font-weight,
   colors: $var-colors,
-  breakpoint-code-values: $var-breakpoint-code-values,
   breakpoint-values: $var-breakpoint-values,
 );

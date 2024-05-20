@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "sass:color";
+@use "sass:meta";
+@use "sass:math";
+
+// Definimos una función custom para convertir a display-p3
+@function var-to-display-p3($var-hex-color) {
+  @return color(display-p3(math.div(color.red($var-hex-color), 255), math.div(color.green($var-hex-color), 255), math.div(color.blue($var-hex-color), 255)));
+}
+
+@function var-generate-color-map($var-colors) {
+  $var-result: ();
+
+  @each $var-name, $var-hex in $var-colors {
+    $var-display-p3: if(meta.type-of($var-hex) == "color", var-to-display-p3($var-hex), null);
+
+    $var-result: map.set(
+      $var-result,
+      $var-name,
+      (
+        "display-p3": $var-display-p3,
+        "srgb": $var-hex,
+      )
+    );
+  }
+
+  @return $var-result;
+}
