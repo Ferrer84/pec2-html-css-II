@@ -1,38 +1,60 @@
 /* ========== typography ========== */
+@use "sass:map";
 @use "variables" as v;
 @use "typography" as t;
 
-* {
-  padding: 0;
-  box-sizing: border-box;
+/* Definir capas */
+@layer reset, base, theme;
+
+/* Estilos de reset */
+@layer reset {
+  * {
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
 }
 
-html {
-  font-size: var(--font-size-document);
+/* Estilos base */
+@layer base {
+  html {
+    font-size: var(--font-size-document);
+  }
+
+  body {
+    min-height: 100lvh;
+    min-width: 300px;
+    font-family: t.$var-font-primary;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: map.get(map.get(v.$var-colors, "main-black"), "srgb");
+
+    @supports (color: color(display-p3 1 1 1)) {
+      color: map.get(map.get(v.$var-colors, "main-black"), "display-p3");
+    }
+  }
 }
 
-body {
-  min-height: 100lvh;
-  min-width: 300px;
-  font-family: t.$var-font-primary;
-  line-height: 1.8;
-  display: flex;
-  flex-direction: column;
-}
+/* Estilos de tema */
+@layer theme {
+  a {
+    color: map.get(map.get(v.$var-colors, "main-black"), "srgb");
 
-/* ========== img ========== */
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-}
-
-/* ========== list ========== */
-ul {
-  list-style: none;
-}
-
-/* ========== link ========== */
-a {
-  color: #000;
+    @supports (color: color(display-p3 1 1 1)) {
+      color: map.get(map.get(v.$var-colors, "main-black"), "display-p3");
+    }
+  }
 }

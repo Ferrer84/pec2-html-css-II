@@ -13,6 +13,10 @@
   background-size: cover;
   color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
 
+  @supports (color: color(display-p3 1 1 1)) {
+    color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
+  }
+
   @supports (display: grid) {
     display: grid;
     place-items: center;
@@ -24,10 +28,5 @@
       display: grid;
       gap: 1rem;
     }
-  }
-
-  @supports (color: color(display-p3 1 1 1)) {
-    color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
-    text-shadow: 1px 1px 2px map.get(map.get(v.$var-colors, "main-black"), "display-p3");
   }
 }

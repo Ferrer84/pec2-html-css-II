@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../base/variables" as v;
+
 .footer {
   &__container {
     display: grid;
@@ -17,5 +20,21 @@
 
   &__info {
     font-size: 0.8rem;
+  }
+
+  &__link {
+    color: map.get(map.get(v.$var-colors, "main-black"), "srgb");
+
+    @supports (color: color(display-p3 1 1 1)) {
+      color: map.get(map.get(v.$var-colors, "main-black"), "display-p3");
+    }
+
+    &:hover {
+      color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
+
+      @supports (color: color(display-p3 1 1 1)) {
+        color: map.get(map.get(v.$var-colors, "main-orange"), "display-p3");
+      }
+    }
   }
 }

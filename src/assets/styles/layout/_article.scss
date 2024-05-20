@@ -9,14 +9,23 @@
   &__header {
     position: relative;
     text-align: center;
-    color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
+    color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
+
+    @supports (color: color(display-p3 1 1 1)) {
+      color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
+    }
+
     padding: 60px 20px;
     background-image: url("../images/article_1.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 8px;
     margin-bottom: 4rem;
-    text-shadow: 1px 1px 2px map.get(map.get(v.$var-colors, "main-black"), "display-p3");
+    text-shadow: 1px 1px 2px map.get(map.get(v.$var-colors, "main-black"), "srgb");
+
+    @supports (color: color(display-p3 1 1 1)) {
+      text-shadow: map.get(map.get(v.$var-colors, "main-black"), "display-p3");
+    }
   }
 
   &__title {
@@ -26,7 +35,11 @@
 
   &__subtitle {
     font-size: 1.2em;
-    color: map.get(map.get(v.$var-colors, "main-orange"), "display-p3");
+    color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
+
+    @supports (color: color(display-p3 1 1 1)) {
+      color: map.get(map.get(v.$var-colors, "main-orange"), "display-p3");
+    }
   }
 
   &__image {
@@ -47,7 +60,11 @@
     text-align: center;
     margin-top: 40px;
     font-size: 0.9em;
-    color: map.get(map.get(v.$var-colors, "main-grey"), "display-p3");
+    color: map.get(map.get(v.$var-colors, "main-grey"), "srgb");
+
+    @supports (color: color(display-p3 1 1 1)) {
+      color: map.get(map.get(v.$var-colors, "main-grey"), "display-p3");
+    }
   }
 }
 
@@ -66,8 +83,12 @@
       left: 10px;
       top: 50%;
       transform: translateY(-50%);
-      color: map.get(map.get(v.$var-colors, "main-orange"), "display-p3");
-      color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
+      color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
+
+      @supports (color: color(display-p3 1 1 1)) {
+        color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
+      }
+
       border-radius: 50%;
       width: 2rem;
       height: 2rem;
@@ -93,8 +114,14 @@
       left: 10px;
       top: 50%;
       transform: translateY(-50%);
-      background-color: map.get(map.get(v.$var-colors, "main-orange"), "display-p3");
-      color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
+      color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
+      background-color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
+
+      @supports (color: color(display-p3 1 1 1)) {
+        color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
+        background-color: map.get(map.get(v.$var-colors, "main-orange"), "display-p3");
+      }
+
       border-radius: 50%;
       width: 2rem;
       height: 2rem;

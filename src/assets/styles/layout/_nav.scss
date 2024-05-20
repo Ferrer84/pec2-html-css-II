@@ -1,13 +1,42 @@
 @use "sass:map";
 @use "../base/variables" as v;
 
+.navbar-nav {
+  .nav-link {
+    color: map.get(map.get(v.$var-colors, "main-black"), "srgb");
+
+    @supports (color: color(display-p3 1 1 1)) {
+      color: map.get(map.get(v.$var-colors, "main-black"), "display-p3");
+    }
+
+    transition: color 0.2s;
+
+    &.active {
+      color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
+
+      @supports (color: color(display-p3 1 1 1)) {
+        color: map.get(map.get(v.$var-colors, "main-orange"), "display-p3");
+      }
+    }
+
+    &:hover {
+      color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
+
+      @supports (color: color(display-p3 1 1 1)) {
+        color: map.get(map.get(v.$var-colors, "main-orange"), "display-p3");
+      }
+    }
+  }
+}
+
 .navbar-container {
   height: 100%;
   padding: 0;
 
-  :is(.container-fluid, .navbar-nav) {
+  .container-fluid,
+  .navbar-nav {
     height: 100%;
-    background-color: map.get(map.get(v.$var-colors, "main-white"), "srgb");
+    background-color: map.get(map.get(v.$var-colors, "main-black"), "srgb");
 
     @supports (color: color(display-p3 1 1 1)) {
       background-color: map.get(map.get(v.$var-colors, "main-white"), "display-p3");
@@ -23,19 +52,24 @@
   }
 
   .navbar-toggler {
+    width: 40px;
+    height: 40px;
     transform: scale(0.7);
+
+    background-image: url("../../assets/images/utensils-solid.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: center;
+    border-radius: 50%;
+
+    background-color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
+
+    @supports (color: color(display-p3 1 1 1)) {
+      background-color: map.get(map.get(v.$var-colors, "main-orange"), "display-p3");
+    }
   }
-}
 
-.navbar-nav .nav-item .nav-link {
-  color: map.get(map.get(v.$var-colors, "main-black"), "srgb");
-  transition: color 0.2s;
-
-  &.active {
-    color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
-  }
-
-  &:hover {
-    color: map.get(map.get(v.$var-colors, "main-orange"), "srgb");
+  &__brand img {
+    transform: scale(1.5);
   }
 }
